@@ -1,5 +1,1 @@
-<div align="center">
-# snake-game
-</div>
----
-
+#snake game
