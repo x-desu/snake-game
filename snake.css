@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.popup{
+    width: 320px;
+    height: 180px;
+    background-image: url(https://i.pinimg.com/originals/86/e8/87/86e887d7befea97190272ceb31ff33e5.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    position: fixed;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    animation: pop 0.5s linear forwards;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0,0.3);
+
+}
+
+@keyframes pop {
+    0%{
+        top: 0;
+        opacity: 0;
+    }
+    100%{
+        top: 20%;
+        opacity: 1;
+    }
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    border-radius: 18px;
+    border: none;
+    font-family: monospace;
+    background-image: url(https://i.gifer.com/Iq2Y.gif);
+    background-position: bottom;
+    color: white;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+    margin-top:110px;
+    
+    
+    text-align: center;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+
+.btn:active{
+    transform: scale(.9);
+    filter: brightness(0.9);
+}
+
+h3{
+    font-size: 1.5rem;
+    color: white;
+    font-family: monospace;
+    letter-spacing: 5px;
+    word-spacing: 125px;
+}
+/* #board{
+    border: 10px solid transparent;
+    border-image: url(http://www.hamletadd.com/wp-content/uploads/2015/09/ham_video_overlay_frame1-1280x720-c-default.png) 30 round;
+    width: 90vmin;
+    height: 92vmin;
+    display: grid;
+    grid-template-rows: repeat(18,1fr) ;
+    grid-template-columns: repeat(18,1fr) ;
+    
+} */
+
+.head{
+    background-color: green;
+
+}
+
+.snake{
+    background-color: green;
+}
+
+.food{
+    background-color: greenyellow;
+
+}
