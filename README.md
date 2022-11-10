@@ -2,8 +2,8 @@
 ---
 [Snake Game website](https://snake.on.fleek.co/)
 
-<div>
-            <video src= 'https://clipchamp.com/watch/Yc3rCQ1FxPD'></video>
-                <img style="height:22px;" src="https://clipchamp.com/e.svg" alt="Made with Clipchamp" />
-            
-        </div>
+## Video
+
+
+https://user-images.githubusercontent.com/64004999/201061787-7f5da96c-8a8b-4bc4-9772-263a11bbda0f.mp4
+
