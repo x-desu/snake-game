@@ -1,8 +1,10 @@
-# snake game
----
-[Snake Game website](https://snake.on.fleek.co/)
-
-<img src="https://i.ibb.co/Tt6GdQT/Screenshot-66.png" width = "250" height="250" >
+<h2 a1lign='center'>Snake game made in js</h2>
+<div align = 'center'>
+<a href="https://snake.on.fleek.co/"><h1>Game website</h1></a>
+</div>
+<div align = 'center'>
+<img src='https://i.ibb.co/Tt6GdQT/Screenshot-66.png'>
+</div>
 
 
 
