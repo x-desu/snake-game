@@ -80,6 +80,8 @@ window.onload = () =>{
     setInterval(update,100)
 }
 
+let score = 0
+
 function update(){
     if(gameOver){
         return;
@@ -92,6 +94,8 @@ function update(){
 
     if (snakeX == foodX && snakeY == foodY){
         eat.play()
+        score++
+        document.getElementById('scores').innerHTML = `score: ${score}`
         eat.volume = 0.4
         snakeBody.push([foodX,foodY])
         placeFood()

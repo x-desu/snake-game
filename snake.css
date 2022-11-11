@@ -73,6 +73,13 @@ h3{
     letter-spacing: 5px;
     word-spacing: 125px;
 }
+
+#scores{
+    font-size: 1.5rem;
+    font-family: monospace;
+    font-weight: lighter;
+    color: lime;
+}
 /* #board{
     border: 10px solid transparent;
     border-image: url(http://www.hamletadd.com/wp-content/uploads/2015/09/ham_video_overlay_frame1-1280x720-c-default.png) 30 round;
