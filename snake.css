@@ -125,7 +125,7 @@ h3{
     display: block;
     margin: 0 auto;
     position: absolute;
-    bottom: 0;
+    bottom: 30%;
     right: 50%;
     transform: translateX(50%);
 }
@@ -135,7 +135,7 @@ h3{
     background-size: cover;
     background-position:center;
     height: 100px;
-    width: 120px;
+    width: 100px;
     display: inline-block;
     margin: 20% 0;
     position: absolute;
@@ -150,7 +150,7 @@ h3{
     background-size: cover;
     background-position:center;
     height: 100px;
-    width: 120px;
+    width: 100px;
     display: inline-block;
     margin: 20% 0;
     position: absolute;
