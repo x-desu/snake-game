@@ -28,8 +28,30 @@ var gameOver = false;
 
 window.onload = () =>{
     board = document.getElementById('board')
+    if (document.body.offsetWidth <= 1400){
+        rows = 15 
+    cols = 14 
+    const up = document.createElement('button')
+    const left = document.createElement('button')
+    const right = document.createElement('button')
+    const down = document.createElement('button')
+    
+    
+    
+    up.classList.add('up')
+    down.classList.add('down')
+    left.classList.add('left')
+    right.classList.add('right')
+    const div = document.getElementById('arcade')
+    arcade.append(up,left,right,down)
+    up.addEventListener('click',changeDirection)
+    down.addEventListener('click',changeDirection)
+    left.addEventListener('click',changeDirection)
+    right.addEventListener('click',changeDirection)
+    }
     board.height = rows * blockSize
     board.width = cols * blockSize
+
     context = board.getContext('2d')
     
 
@@ -69,11 +91,11 @@ function update(){
     if(snakeX > rows * blockSize){
         snakeX = 0 
     }else if(snakeX < 0){
-        snakeX = 500
+        snakeX = cols * blockSize
     }else if(snakeY > cols * blockSize){
         snakeY = 0
     }else if(snakeY < 0){
-        snakeY = 500
+        snakeY = rows * blockSize
     }
     context.fillRect(snakeX,snakeY,blockSize,blockSize)
     for (let i =0; i < snakeBody.length;i++) {
@@ -108,19 +130,19 @@ function update(){
 
 
 function changeDirection(e) {
-    if (e.code == 'ArrowUp' && velocityY != 1){
+    if ((e.code == 'ArrowUp' && velocityY != 1) || (e.target.classList.value == 'up' && velocityY != 1)){
         velocityX = 0;
         velocityY = -1;
     }
-    else if (e.code == 'ArrowDown' && velocityY != -1){
+    else if ((e.code == 'ArrowDown' && velocityY != -1) || (e.target.classList.value == 'down' && velocityY != -1)){
         velocityX = 0;
         velocityY = 1;
     }
-    else if (e.code == 'ArrowLeft' && velocityX != 1){
+    else if ((e.code == 'ArrowLeft' && velocityX != 1) || (e.target.classList.value == 'left' && velocityX != 1)){
         velocityX = -1;
         velocityY = 0;
     }
-    else if (e.code == 'ArrowRight' && velocityX != -1){
+    else if ((e.code == 'ArrowRight' && velocityX != -1) || (e.target.classList.value == 'right' && velocityX != -1)){
         velocityX = 1;
         velocityY = 0;
     }

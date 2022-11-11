@@ -97,3 +97,64 @@ h3{
     background-color: greenyellow;
 
 }
+
+.arcade{
+    
+    width: 90vw;
+    height: 40vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+.up{
+    background-color: white;
+    background-image: url(./arrow.png);
+    background-size: cover;
+    height: 100px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+}
+.down{
+    background-color: white;
+    background-image: url(./down.png);
+    background-size: cover;
+    background-position:center;
+    height: 100px;
+    width: 120px;
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
+.left{
+    background-color: white;
+    background-image: url(./left.png);
+    background-size: cover;
+    background-position:center;
+    height: 100px;
+    width: 120px;
+    display: inline-block;
+    margin: 20% 0;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+.right{
+    background-color: white;
+    background-image: url(./right.png);
+    background-size: cover;
+    background-position:center;
+    height: 100px;
+    width: 120px;
+    display: inline-block;
+    margin: 20% 0;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    transform: translateY(-50%);
+}
