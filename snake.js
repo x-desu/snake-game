@@ -48,6 +48,20 @@ window.onload = () =>{
     down.addEventListener('click',changeDirection)
     left.addEventListener('click',changeDirection)
     right.addEventListener('click',changeDirection)
+    document.body.addEventListener('touchstart', function() {
+        if(audiosWeWantToUnlock) {
+         for(let audio of audiosWeWantToUnlock) {
+          audio.play()
+          audio.pause()
+          audio.currentTime = 0
+         }
+         audiosWeWantToUnlock = null
+       }
+       }, false)
+       //where earlier you did:
+       var audiosWeWantToUnlock = []
+       audiosWeWantToUnlock.push(new Audio('game1.wav'))
+       audiosWeWantToUnlock.push(new Audio('food.wav'))
     }
     board.height = rows * blockSize
     board.width = cols * blockSize
