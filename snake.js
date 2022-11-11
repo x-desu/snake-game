@@ -49,7 +49,7 @@ window.onload = () =>{
     left.addEventListener('click',changeDirection)
     right.addEventListener('click',changeDirection)
     var audiosWeWantToUnlock = []
-       audiosWeWantToUnlock.push(new Audio('music2.wav'))
+       audiosWeWantToUnlock.push(new Audio('music.wav'))
     document.body.addEventListener('touchstart', function() {
         if(audiosWeWantToUnlock) {
          for(let audio of audiosWeWantToUnlock) {
@@ -58,7 +58,7 @@ window.onload = () =>{
          }
          audiosWeWantToUnlock = null
        }
-       }, false)
+       })
        //where earlier you did:
        
        
