@@ -54,16 +54,16 @@ window.onload = () =>{
     document.body.addEventListener('touchstart', function() {
         if(audiosWeWantToUnlock) {
          
-          audiosWeWantToUnlock[0].play() 
+          audiosWeWantToUnlock[1].play() 
           
          
-         
-         if(gameOver == true){
+        } 
+         else if(gameOver == true){
          audiosWeWantToUnlock[0].pause()   
          audiosWeWantToUnlock[1].play()   
         }
         
-       }
+       
        })
        //where earlier you did:
        
