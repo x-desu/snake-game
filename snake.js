@@ -49,14 +49,20 @@ window.onload = () =>{
     left.addEventListener('click',changeDirection)
     right.addEventListener('click',changeDirection)
     var audiosWeWantToUnlock = []
-       audiosWeWantToUnlock.push(new Audio('music.wav'))
+       audiosWeWantToUnlock.push(new Audio('music2.wav'))
+       audiosWeWantToUnlock.push(new Audio('game1.mp3'))
     document.body.addEventListener('touchstart', function() {
         if(audiosWeWantToUnlock) {
-         for(let audio of audiosWeWantToUnlock) {
-          audio.play()
          
-         }
-         audiosWeWantToUnlock = null
+          audiosWeWantToUnlock[0].play() 
+          
+         
+         
+         if(gameOver == true){
+         audiosWeWantToUnlock[0].pause()   
+         audiosWeWantToUnlock[1].play()   
+        }
+        
        }
        })
        //where earlier you did:
