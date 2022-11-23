@@ -49,17 +49,21 @@ window.onload = () =>{
     left.addEventListener('click',changeDirection)
     right.addEventListener('click',changeDirection)
     var audiosWeWantToUnlock = []
-       
+       const random = Math.floor(Math.random() * 5)
+       audiosWeWantToUnlock.push(new Audio('music2.wav'))
+       audiosWeWantToUnlock.push(new Audio('music.wav'))
+       audiosWeWantToUnlock.push(new Audio('music3.wav'))
+       audiosWeWantToUnlock.push(new Audio('music4.wav'))
        audiosWeWantToUnlock.push(new Audio('game1.mp3'))
     document.body.addEventListener('touchstart', function() {
         if(audiosWeWantToUnlock) {
          
-          audiosWeWantToUnlock[0].play() 
+          audiosWeWantToUnlock[random].play() 
           
          
         } 
          else if(gameOver == true){
-         audiosWeWantToUnlock[0].pause()   
+         audiosWeWantToUnlock[random].pause()   
             
         }
         
@@ -154,6 +158,9 @@ function update(){
 
 
 function changeDirection(e) {
+    const h2 = document.querySelector('h2')
+    h2.style.display = 'none'
+
     if ((e.code == 'ArrowUp' && velocityY != 1) || (e.target.classList.value == 'up' && velocityY != 1)){
         velocityX = 0;
         velocityY = -1;
